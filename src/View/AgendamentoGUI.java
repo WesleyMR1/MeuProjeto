@@ -38,16 +38,32 @@ public class AgendamentoGUI extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
         jLabelProcedimento = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jComboBoxProcedimento1 = new javax.swing.JComboBox<>();
         jLabelProcedimento2 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
+        jComboBoxProcedimento2 = new javax.swing.JComboBox<>();
         jLabelCliente = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
+        jLabeldata1 = new javax.swing.JLabel();
+        jTextFieldHora = new javax.swing.JTextField();
+        jTextFieldData = new javax.swing.JTextField();
+        jTextFieldPreco2 = new javax.swing.JTextField();
+        jTextFieldPreco1 = new javax.swing.JTextField();
+        jLabelPreco2 = new javax.swing.JLabel();
+        jLabelPreco1 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jTextField3 = new javax.swing.JTextField();
+        jLabel6 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jTextArea1 = new javax.swing.JTextArea();
+        jLabel7 = new javax.swing.JLabel();
+        jLabelLocal = new javax.swing.JLabel();
+        jComboBoxLocal = new javax.swing.JComboBox<>();
+        jLabelPreco3 = new javax.swing.JLabel();
+        jTextFieldLocal = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(750, 550));
         setUndecorated(true);
-        setPreferredSize(new java.awt.Dimension(750, 550));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TabAgenda.setBackground(new java.awt.Color(51, 51, 51));
@@ -100,49 +116,50 @@ public class AgendamentoGUI extends javax.swing.JFrame {
 
         jLabeldata.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabeldata.setForeground(new java.awt.Color(255, 255, 255));
-        jLabeldata.setText("Data/Hora");
-        TabAgendamento2.add(jLabeldata, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 230, -1, -1));
+        jLabeldata.setText("Hora");
+        TabAgendamento2.add(jLabeldata, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
 
+        jTextFieldID.setEditable(false);
         jTextFieldID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldIDActionPerformed(evt);
             }
         });
-        TabAgendamento2.add(jTextFieldID, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 70, -1, 20));
+        TabAgendamento2.add(jTextFieldID, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 30, -1, 20));
 
         jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        TabAgendamento2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 200, 20));
+        TabAgendamento2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 30, 200, 20));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ID");
-        TabAgendamento2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 60, -1, -1));
+        TabAgendamento2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 20, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(255, 255, 255));
         jLabel3.setText("nome");
-        TabAgendamento2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 60, 30, -1));
+        TabAgendamento2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 20, 30, -1));
 
         jLabelProcedimento.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelProcedimento.setForeground(new java.awt.Color(255, 255, 255));
         jLabelProcedimento.setText("Procedimento");
-        TabAgendamento2.add(jLabelProcedimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, -1, -1));
+        TabAgendamento2.add(jLabelProcedimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 30, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        TabAgendamento2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, 220, -1));
+        jComboBoxProcedimento1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        TabAgendamento2.add(jComboBoxProcedimento1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 30, 220, -1));
 
         jLabelProcedimento2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelProcedimento2.setForeground(new java.awt.Color(255, 255, 255));
         jLabelProcedimento2.setText("Procedimento2");
-        TabAgendamento2.add(jLabelProcedimento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, -1, -1));
+        TabAgendamento2.add(jLabelProcedimento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, -1, -1));
 
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        TabAgendamento2.add(jComboBox3, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 170, 220, -1));
+        jComboBoxProcedimento2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        TabAgendamento2.add(jComboBoxProcedimento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 220, -1));
 
         jLabelCliente.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelCliente.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCliente.setText("Cliente");
-        TabAgendamento2.add(jLabelCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 70, -1, -1));
+        TabAgendamento2.add(jLabelCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
 
         jButton1.setBackground(new java.awt.Color(102, 102, 102));
         jButton1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -154,6 +171,63 @@ public class AgendamentoGUI extends javax.swing.JFrame {
             }
         });
         TabAgendamento2.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 280, 290, 40));
+
+        jLabeldata1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabeldata1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabeldata1.setText("Data");
+        TabAgendamento2.add(jLabeldata1, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 70, -1, -1));
+        TabAgendamento2.add(jTextFieldHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 110, 200, -1));
+        TabAgendamento2.add(jTextFieldData, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 70, 200, -1));
+        TabAgendamento2.add(jTextFieldPreco2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, 60, -1));
+        TabAgendamento2.add(jTextFieldPreco1, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 60, 60, -1));
+
+        jLabelPreco2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelPreco2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPreco2.setText("R$");
+        TabAgendamento2.add(jLabelPreco2, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 120, -1, -1));
+
+        jLabelPreco1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelPreco1.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPreco1.setText("R$");
+        TabAgendamento2.add(jLabelPreco1, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 60, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel5.setText("TOTAL");
+        TabAgendamento2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, -1, -1));
+
+        jTextField3.setEditable(false);
+        TabAgendamento2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(541, 250, 190, -1));
+
+        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel6.setText("R$");
+        TabAgendamento2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 250, -1, -1));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jScrollPane2.setViewportView(jTextArea1);
+
+        TabAgendamento2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 170, 200, -1));
+
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel7.setText("OBS ");
+        TabAgendamento2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, -1, -1));
+
+        jLabelLocal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelLocal.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelLocal.setText("Local");
+        TabAgendamento2.add(jLabelLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 160, -1, -1));
+
+        jComboBoxLocal.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        TabAgendamento2.add(jComboBoxLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 160, 220, -1));
+
+        jLabelPreco3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jLabelPreco3.setForeground(new java.awt.Color(255, 255, 255));
+        jLabelPreco3.setText("R$");
+        TabAgendamento2.add(jLabelPreco3, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 190, -1, -1));
+        TabAgendamento2.add(jTextFieldLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 190, 60, -1));
 
         jTabbedPane1.addTab("Agendamento", TabAgendamento2);
 
@@ -212,17 +286,34 @@ public class AgendamentoGUI extends javax.swing.JFrame {
     private javax.swing.JPanel TabConfirmacao;
     private javax.swing.JButton jButton1;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBoxLocal;
+    private javax.swing.JComboBox<String> jComboBoxProcedimento1;
+    private javax.swing.JComboBox<String> jComboBoxProcedimento2;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabelCliente;
+    private javax.swing.JLabel jLabelLocal;
+    private javax.swing.JLabel jLabelPreco1;
+    private javax.swing.JLabel jLabelPreco2;
+    private javax.swing.JLabel jLabelPreco3;
     private javax.swing.JLabel jLabelProcedimento;
     private javax.swing.JLabel jLabelProcedimento2;
     private javax.swing.JLabel jLabeldata;
+    private javax.swing.JLabel jLabeldata1;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTabbedPane jTabbedPane1;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField3;
+    private javax.swing.JTextField jTextFieldData;
+    private javax.swing.JTextField jTextFieldHora;
     private javax.swing.JTextField jTextFieldID;
+    private javax.swing.JTextField jTextFieldLocal;
+    private javax.swing.JTextField jTextFieldPreco1;
+    private javax.swing.JTextField jTextFieldPreco2;
     // End of variables declaration//GEN-END:variables
 }
