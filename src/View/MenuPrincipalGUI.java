@@ -60,7 +60,7 @@ public class MenuPrincipalGUI extends javax.swing.JFrame {
         jButton5.setBackground(new java.awt.Color(102, 102, 102));
         jButton5.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jButton5.setForeground(new java.awt.Color(255, 255, 255));
-        jButton5.setText("Agendamento");
+        jButton5.setText("Agenda");
         jButton5.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton5ActionPerformed(evt);
