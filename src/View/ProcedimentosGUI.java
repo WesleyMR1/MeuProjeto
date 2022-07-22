@@ -8,12 +8,12 @@ package View;
  *
  * @author uso
  */
-public class Procedimentos extends javax.swing.JFrame {
+public class ProcedimentosGUI extends javax.swing.JFrame {
 
     /**
      * Creates new form Procedimentos
      */
-    public Procedimentos() {
+    public ProcedimentosGUI() {
         initComponents();
     }
 
@@ -30,6 +30,7 @@ public class Procedimentos extends javax.swing.JFrame {
         jPanelProdecimentos = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
+        jButton3 = new javax.swing.JButton();
         jPanelCadastro = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -44,8 +45,10 @@ public class Procedimentos extends javax.swing.JFrame {
         jTextFieldPreco = new javax.swing.JTextField();
         jLabelSituacao = new javax.swing.JLabel();
         jComboBoxSituacao = new javax.swing.JComboBox<>();
+        jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(750, 550));
         setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(750, 550));
 
@@ -67,7 +70,12 @@ public class Procedimentos extends javax.swing.JFrame {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanelProdecimentos.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, 710, 480));
+        jPanelProdecimentos.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 710, 420));
+
+        jButton3.setBackground(new java.awt.Color(102, 0, 0));
+        jButton3.setForeground(new java.awt.Color(255, 255, 255));
+        jButton3.setText("VOLTAR");
+        jPanelProdecimentos.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Procedimentos", jPanelProdecimentos);
 
@@ -104,33 +112,38 @@ public class Procedimentos extends javax.swing.JFrame {
         jLabelPreco.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelPreco.setForeground(new java.awt.Color(255, 255, 255));
         jLabelPreco.setText("Preço");
-        jPanelCadastro.add(jLabelPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 110, -1, -1));
-        jPanelCadastro.add(jTextFieldID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 60, -1, -1));
+        jPanelCadastro.add(jLabelPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, -1, -1));
+        jPanelCadastro.add(jTextFieldID, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 100, -1, -1));
 
         jLabelID.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelID.setText("ID");
-        jPanelCadastro.add(jLabelID, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 60, -1, -1));
-        jPanelCadastro.add(jTextFieldNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 50, 360, -1));
+        jPanelCadastro.add(jLabelID, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 100, -1, -1));
+        jPanelCadastro.add(jTextFieldNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 90, 360, -1));
 
         jLabelNome.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelNome.setForeground(new java.awt.Color(255, 255, 255));
         jLabelNome.setText("Nome");
-        jPanelCadastro.add(jLabelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, -1, -1));
+        jPanelCadastro.add(jLabelNome, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
 
         jLabelRS.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelRS.setForeground(new java.awt.Color(242, 242, 242));
         jLabelRS.setText("R$");
-        jPanelCadastro.add(jLabelRS, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 110, -1, -1));
-        jPanelCadastro.add(jTextFieldPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 110, 90, -1));
+        jPanelCadastro.add(jLabelRS, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 150, -1, -1));
+        jPanelCadastro.add(jTextFieldPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 150, 90, -1));
 
         jLabelSituacao.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelSituacao.setForeground(new java.awt.Color(255, 255, 255));
         jLabelSituacao.setText("Situação");
-        jPanelCadastro.add(jLabelSituacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 170, -1, -1));
+        jPanelCadastro.add(jLabelSituacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, -1, -1));
 
         jComboBoxSituacao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanelCadastro.add(jComboBoxSituacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 170, 240, -1));
+        jPanelCadastro.add(jComboBoxSituacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 240, -1));
+
+        jButton4.setBackground(new java.awt.Color(102, 0, 0));
+        jButton4.setForeground(new java.awt.Color(255, 255, 255));
+        jButton4.setText("VOLTAR");
+        jPanelCadastro.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Cadastro", jPanelCadastro);
 
@@ -166,20 +179,21 @@ public class Procedimentos extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Procedimentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProcedimentosGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Procedimentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProcedimentosGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Procedimentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProcedimentosGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(Procedimentos.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(ProcedimentosGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Procedimentos().setVisible(true);
+                new ProcedimentosGUI().setVisible(true);
             }
         });
     }
@@ -187,6 +201,8 @@ public class Procedimentos extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
     private javax.swing.JComboBox<String> jComboBoxSituacao;
     private javax.swing.JLabel jLabelID;
     private javax.swing.JLabel jLabelNome;
