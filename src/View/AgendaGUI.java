@@ -82,7 +82,6 @@ public class AgendaGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(750, 550));
-        setUndecorated(true);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TabAgenda.setBackground(new java.awt.Color(51, 51, 51));
@@ -271,7 +270,11 @@ public class AgendaGUI extends javax.swing.JFrame {
         jLabelAgendamentoData.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAgendamentoData.setText("Data");
         TabAgendamento2.add(jLabelAgendamentoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
+
+        jTextFieldAgendamentoPreco2.setEditable(false);
         TabAgendamento2.add(jTextFieldAgendamentoPreco2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 180, 60, -1));
+
+        jTextFieldAgendamentoPreco.setEditable(false);
         TabAgendamento2.add(jTextFieldAgendamentoPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, 60, -1));
 
         jLabelAgendamentoPreco2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

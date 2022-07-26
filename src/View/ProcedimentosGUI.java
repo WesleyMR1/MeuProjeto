@@ -49,7 +49,6 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(750, 550));
-        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(750, 550));
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));

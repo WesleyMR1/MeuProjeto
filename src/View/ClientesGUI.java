@@ -53,7 +53,6 @@ public class ClientesGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(750, 550));
-        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(750, 550));
 
         TabClientes.setBackground(new java.awt.Color(51, 51, 51));

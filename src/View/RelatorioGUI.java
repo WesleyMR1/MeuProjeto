@@ -38,7 +38,6 @@ public class RelatorioGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(750, 550));
-        setUndecorated(true);
         setPreferredSize(new java.awt.Dimension(750, 550));
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
