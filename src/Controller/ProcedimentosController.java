@@ -1,6 +1,7 @@
 
 package Controller;
 
+import View.MenuPrincipalGUI;
 import View.ProcedimentosGUI;
 
 public class ProcedimentosController {
@@ -12,10 +13,10 @@ public class ProcedimentosController {
     }
     
     public void voltarAoMenuPrincipal(){
-        ProcedimentosGUI procedimentosView = new ProcedimentosGUI();
-        procedimentosView.setVisible(true);
-        view.dispose();
- }
+       MenuPrincipalGUI menuPrincipalView = new MenuPrincipalGUI();
+       menuPrincipalView.setVisible(true);
+       view.dispose();    
+    }
     
     
 }

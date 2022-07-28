@@ -31,7 +31,7 @@ public class AgendaGUI extends javax.swing.JFrame {
         TabAgenda = new javax.swing.JPanel();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTableAgendaTabela = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        jButtonAgendaVoltar = new javax.swing.JButton();
         TabConfirmacao = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTableConfirmacaoTabela = new javax.swing.JTable();
@@ -47,7 +47,7 @@ public class AgendaGUI extends javax.swing.JFrame {
         jLabelConfirmacaoProcedimento2 = new javax.swing.JLabel();
         jTextFieldConfirmacaoProcedimento2 = new javax.swing.JTextField();
         jDateChooserConfirmacao = new com.toedter.calendar.JDateChooser();
-        jButton2 = new javax.swing.JButton();
+        jButtonConfirmacaoVoltar = new javax.swing.JButton();
         TabAgendamento2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableAgendamentoTabela = new javax.swing.JTable();
@@ -79,7 +79,7 @@ public class AgendaGUI extends javax.swing.JFrame {
         jTextFieldAgendamentoPrecoLocal = new javax.swing.JTextField();
         jDateChooserAgendamentoData = new com.toedter.calendar.JDateChooser();
         jFormattedTextFieldAgendamentoHora = new javax.swing.JFormattedTextField();
-        jButton3 = new javax.swing.JButton();
+        jButtonAgendamentoVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(750, 550));
@@ -103,15 +103,15 @@ public class AgendaGUI extends javax.swing.JFrame {
 
         TabAgenda.add(jScrollPane4, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 97, 710, 410));
 
-        jButton1.setBackground(new java.awt.Color(102, 0, 0));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("VOLTAR");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        jButtonAgendaVoltar.setBackground(new java.awt.Color(102, 0, 0));
+        jButtonAgendaVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonAgendaVoltar.setText("VOLTAR");
+        jButtonAgendaVoltar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                jButtonAgendaVoltarActionPerformed(evt);
             }
         });
-        TabAgenda.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+        TabAgenda.add(jButtonAgendaVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Agenda", TabAgenda);
 
@@ -187,10 +187,15 @@ public class AgendaGUI extends javax.swing.JFrame {
         jDateChooserConfirmacao.setDateFormatString("d'/'MM'/'y");
         TabConfirmacao.add(jDateChooserConfirmacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 130, -1));
 
-        jButton2.setBackground(new java.awt.Color(102, 0, 0));
-        jButton2.setForeground(new java.awt.Color(255, 255, 255));
-        jButton2.setText("VOLTAR");
-        TabConfirmacao.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+        jButtonConfirmacaoVoltar.setBackground(new java.awt.Color(102, 0, 0));
+        jButtonConfirmacaoVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonConfirmacaoVoltar.setText("VOLTAR");
+        jButtonConfirmacaoVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonConfirmacaoVoltarActionPerformed(evt);
+            }
+        });
+        TabConfirmacao.add(jButtonConfirmacaoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Confirmação", TabConfirmacao);
 
@@ -338,16 +343,22 @@ public class AgendaGUI extends javax.swing.JFrame {
         jFormattedTextFieldAgendamentoHora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
         TabAgendamento2.add(jFormattedTextFieldAgendamentoHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 200, -1));
 
-        jButton3.setBackground(new java.awt.Color(102, 0, 0));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("VOLTAR");
-        TabAgendamento2.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+        jButtonAgendamentoVoltar.setBackground(new java.awt.Color(102, 0, 0));
+        jButtonAgendamentoVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonAgendamentoVoltar.setText("VOLTAR");
+        jButtonAgendamentoVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonAgendamentoVoltarActionPerformed(evt);
+            }
+        });
+        TabAgendamento2.add(jButtonAgendamentoVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Agendamento", TabAgendamento2);
 
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 550));
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
     private void jTextFieldAgendamentoIDActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextFieldAgendamentoIDActionPerformed
@@ -358,9 +369,17 @@ public class AgendaGUI extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAgendamentoAgendarActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        controller
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void jButtonAgendaVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendaVoltarActionPerformed
+        controller.voltarAoMenuPrincipal();
+    }//GEN-LAST:event_jButtonAgendaVoltarActionPerformed
+
+    private void jButtonConfirmacaoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonConfirmacaoVoltarActionPerformed
+        controller.voltarAoMenuPrincipal();
+    }//GEN-LAST:event_jButtonConfirmacaoVoltarActionPerformed
+
+    private void jButtonAgendamentoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendamentoVoltarActionPerformed
+        controller.voltarAoMenuPrincipal();
+    }//GEN-LAST:event_jButtonAgendamentoVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -404,12 +423,12 @@ public class AgendaGUI extends javax.swing.JFrame {
     private javax.swing.JPanel TabAgenda;
     private javax.swing.JPanel TabAgendamento2;
     private javax.swing.JPanel TabConfirmacao;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButtonAgendaVoltar;
     private javax.swing.JButton jButtonAgendamentoAgendar;
+    private javax.swing.JButton jButtonAgendamentoVoltar;
     private javax.swing.JButton jButtonConfirmacaoCancelar;
     private javax.swing.JButton jButtonConfirmacaoConfirmar;
+    private javax.swing.JButton jButtonConfirmacaoVoltar;
     private javax.swing.JComboBox<String> jComboBoxAgendamentoCliente;
     private javax.swing.JComboBox<String> jComboBoxAgendamentoLocal;
     private javax.swing.JComboBox<String> jComboBoxAgendamentoProcedimento;

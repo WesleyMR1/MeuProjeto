@@ -14,11 +14,11 @@ private final AgendaGUI view;
     }
 
 
- public void voltarAoMenuPrincipal(){
-    AgendaGUI agendaView = new AgendaGUI();
-    agendaView.setVisible(true);
-    view.dispose();    
- }
+    public void voltarAoMenuPrincipal(){
+       MenuPrincipalGUI menuPrincipalView = new MenuPrincipalGUI();
+       menuPrincipalView.setVisible(true);
+       view.dispose();    
+    }
     
     
 }

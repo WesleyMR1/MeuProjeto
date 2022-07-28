@@ -2,6 +2,7 @@
 package Controller;
 
 import View.ClientesGUI;
+import View.MenuPrincipalGUI;
 
 public class ClienteController {
     
@@ -13,10 +14,10 @@ public class ClienteController {
     
     
     public void voltarAoMenuPrincipal(){
-        ClientesGUI clientesView = new ClientesGUI();
-        clientesView.setVisible(true);
-        view.dispose();
- }
+       MenuPrincipalGUI menuPrincipalView = new MenuPrincipalGUI();
+       menuPrincipalView.setVisible(true);
+       view.dispose();    
+    }
     
     
 }

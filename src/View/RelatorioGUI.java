@@ -4,17 +4,19 @@
  */
 package View;
 
+import Controller.RelatorioController;
+
 /**
  *
  * @author uso
  */
 public class RelatorioGUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form RelatorioGUI
-     */
+    private final RelatorioController controller;
+    
     public RelatorioGUI() {
         initComponents();
+        controller = new RelatorioController(this);
     }
 
     /**
@@ -34,7 +36,7 @@ public class RelatorioGUI extends javax.swing.JFrame {
         jLabelTotal = new javax.swing.JLabel();
         jLabelRS = new javax.swing.JLabel();
         jTextFieldTotal = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
+        jButtonVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(750, 550));
@@ -75,10 +77,15 @@ public class RelatorioGUI extends javax.swing.JFrame {
         jTextFieldTotal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jPanel1.add(jTextFieldTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 100, 160, -1));
 
-        jButton1.setBackground(new java.awt.Color(102, 0, 0));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("VOLTAR");
-        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+        jButtonVoltar.setBackground(new java.awt.Color(102, 0, 0));
+        jButtonVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonVoltar.setText("VOLTAR");
+        jButtonVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonVoltarActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButtonVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -92,7 +99,12 @@ public class RelatorioGUI extends javax.swing.JFrame {
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonVoltarActionPerformed
+        controller.voltarAoMenuPrincipal();
+    }//GEN-LAST:event_jButtonVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -130,7 +142,7 @@ public class RelatorioGUI extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButtonVoltar;
     private javax.swing.JLabel jLabelRS;
     private javax.swing.JLabel jLabelTotal;
     private com.toedter.calendar.JMonthChooser jMonthChooser;

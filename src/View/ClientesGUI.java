@@ -4,17 +4,22 @@
  */
 package View;
 
+import Controller.ClienteController;
+
 /**
  *
  * @author uso
  */
 public class ClientesGUI extends javax.swing.JFrame {
 
+    private final ClienteController controller;
+
     /**
      * Creates new form ClientesGUI
      */
     public ClientesGUI() {
         initComponents();
+        controller = new ClienteController(this);
     }
 
     /**
@@ -30,7 +35,7 @@ public class ClientesGUI extends javax.swing.JFrame {
         TabClientes = new javax.swing.JPanel();
         jScrollPane3 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
-        jButton1 = new javax.swing.JButton();
+        jButtonClientesVoltar = new javax.swing.JButton();
         TabCadastro = new javax.swing.JPanel();
         jLabelCadastroTitulo = new javax.swing.JLabel();
         jLabelCadastroNome = new javax.swing.JLabel();
@@ -49,7 +54,7 @@ public class ClientesGUI extends javax.swing.JFrame {
         jButton2 = new javax.swing.JButton();
         jLabelCadastroID = new javax.swing.JLabel();
         jTextFieldCadastroID = new javax.swing.JTextField();
-        jButton3 = new javax.swing.JButton();
+        jButtonCadastroVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(750, 550));
@@ -73,10 +78,15 @@ public class ClientesGUI extends javax.swing.JFrame {
 
         TabClientes.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 710, 420));
 
-        jButton1.setBackground(new java.awt.Color(102, 0, 0));
-        jButton1.setForeground(new java.awt.Color(255, 255, 255));
-        jButton1.setText("VOLTAR");
-        TabClientes.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+        jButtonClientesVoltar.setBackground(new java.awt.Color(102, 0, 0));
+        jButtonClientesVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonClientesVoltar.setText("VOLTAR");
+        jButtonClientesVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonClientesVoltarActionPerformed(evt);
+            }
+        });
+        TabClientes.add(jButtonClientesVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Clientes", TabClientes);
 
@@ -168,10 +178,15 @@ public class ClientesGUI extends javax.swing.JFrame {
         TabCadastro.add(jLabelCadastroID, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 20, -1));
         TabCadastro.add(jTextFieldCadastroID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
 
-        jButton3.setBackground(new java.awt.Color(102, 0, 0));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("VOLTAR");
-        TabCadastro.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+        jButtonCadastroVoltar.setBackground(new java.awt.Color(102, 0, 0));
+        jButtonCadastroVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCadastroVoltar.setText("VOLTAR");
+        jButtonCadastroVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastroVoltarActionPerformed(evt);
+            }
+        });
+        TabCadastro.add(jButtonCadastroVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Cadastro", TabCadastro);
 
@@ -189,6 +204,14 @@ public class ClientesGUI extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonClientesVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonClientesVoltarActionPerformed
+        controller.voltarAoMenuPrincipal();
+    }//GEN-LAST:event_jButtonClientesVoltarActionPerformed
+
+    private void jButtonCadastroVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroVoltarActionPerformed
+        controller.voltarAoMenuPrincipal();
+    }//GEN-LAST:event_jButtonCadastroVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -228,10 +251,10 @@ public class ClientesGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel TabCadastro;
     private javax.swing.JPanel TabClientes;
-    private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
     private javax.swing.JButton jButtonCadastroEditar;
+    private javax.swing.JButton jButtonCadastroVoltar;
+    private javax.swing.JButton jButtonClientesVoltar;
     private javax.swing.JFormattedTextField jFormattedTextFieldCadastroCPF;
     private javax.swing.JFormattedTextField jFormattedTextFieldCadastroCelular;
     private javax.swing.JLabel jLabel5;

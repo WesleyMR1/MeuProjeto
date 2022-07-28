@@ -1,5 +1,6 @@
 package Controller;
 
+import View.MenuPrincipalGUI;
 import View.RelatorioGUI;
 
 public class RelatorioController {
@@ -11,10 +12,10 @@ public class RelatorioController {
     }
     
     public void voltarAoMenuPrincipal(){
-        RelatorioGUI relatorioView = new RelatorioGUI();
-        relatorioView.setVisible(true);
-        view.dispose();    
- }
+       MenuPrincipalGUI menuPrincipalView = new MenuPrincipalGUI();
+       menuPrincipalView.setVisible(true);
+       view.dispose();    
+    }
     
     
     

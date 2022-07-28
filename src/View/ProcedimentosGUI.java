@@ -4,17 +4,18 @@
  */
 package View;
 
+import Controller.ProcedimentosController;
+
 /**
  *
  * @author uso
  */
 public class ProcedimentosGUI extends javax.swing.JFrame {
 
-    /**
-     * Creates new form Procedimentos
-     */
+    private final ProcedimentosController controller;
     public ProcedimentosGUI() {
         initComponents();
+        controller = new ProcedimentosController(this);
     }
 
     /**
@@ -30,7 +31,7 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
         jPanelProdecimentos = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTable1 = new javax.swing.JTable();
-        jButton3 = new javax.swing.JButton();
+        jButtonProcedimentosVoltar = new javax.swing.JButton();
         jPanelCadastro = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTable2 = new javax.swing.JTable();
@@ -45,7 +46,7 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
         jTextFieldPreco = new javax.swing.JTextField();
         jLabelSituacao = new javax.swing.JLabel();
         jComboBoxSituacao = new javax.swing.JComboBox<>();
-        jButton4 = new javax.swing.JButton();
+        jButtonCadastroVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(750, 550));
@@ -71,10 +72,15 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
 
         jPanelProdecimentos.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, 710, 420));
 
-        jButton3.setBackground(new java.awt.Color(102, 0, 0));
-        jButton3.setForeground(new java.awt.Color(255, 255, 255));
-        jButton3.setText("VOLTAR");
-        jPanelProdecimentos.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+        jButtonProcedimentosVoltar.setBackground(new java.awt.Color(102, 0, 0));
+        jButtonProcedimentosVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonProcedimentosVoltar.setText("VOLTAR");
+        jButtonProcedimentosVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonProcedimentosVoltarActionPerformed(evt);
+            }
+        });
+        jPanelProdecimentos.add(jButtonProcedimentosVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Procedimentos", jPanelProdecimentos);
 
@@ -139,10 +145,15 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
         jComboBoxSituacao.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         jPanelCadastro.add(jComboBoxSituacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 210, 240, -1));
 
-        jButton4.setBackground(new java.awt.Color(102, 0, 0));
-        jButton4.setForeground(new java.awt.Color(255, 255, 255));
-        jButton4.setText("VOLTAR");
-        jPanelCadastro.add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+        jButtonCadastroVoltar.setBackground(new java.awt.Color(102, 0, 0));
+        jButtonCadastroVoltar.setForeground(new java.awt.Color(255, 255, 255));
+        jButtonCadastroVoltar.setText("VOLTAR");
+        jButtonCadastroVoltar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButtonCadastroVoltarActionPerformed(evt);
+            }
+        });
+        jPanelCadastro.add(jButtonCadastroVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Cadastro", jPanelCadastro);
 
@@ -160,6 +171,14 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButtonProcedimentosVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonProcedimentosVoltarActionPerformed
+         controller.voltarAoMenuPrincipal();
+    }//GEN-LAST:event_jButtonProcedimentosVoltarActionPerformed
+
+    private void jButtonCadastroVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonCadastroVoltarActionPerformed
+         controller.voltarAoMenuPrincipal();
+    }//GEN-LAST:event_jButtonCadastroVoltarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -200,8 +219,8 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
+    private javax.swing.JButton jButtonCadastroVoltar;
+    private javax.swing.JButton jButtonProcedimentosVoltar;
     private javax.swing.JComboBox<String> jComboBoxSituacao;
     private javax.swing.JLabel jLabelID;
     private javax.swing.JLabel jLabelNome;
