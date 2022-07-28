@@ -49,8 +49,8 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
         jButtonCadastroVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(750, 550));
-        setPreferredSize(new java.awt.Dimension(750, 550));
+        setMinimumSize(new java.awt.Dimension(766, 580));
+        setPreferredSize(new java.awt.Dimension(766, 580));
 
         jTabbedPane1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -168,7 +168,7 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
             .addComponent(jTabbedPane1)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(746, 548));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

@@ -42,6 +42,8 @@ public class MenuPrincipalGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(102, 0, 102));
+        setMinimumSize(new java.awt.Dimension(766, 580));
+        setPreferredSize(new java.awt.Dimension(766, 580));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jPanel2.setBackground(new java.awt.Color(37, 37, 37));
@@ -153,7 +155,7 @@ public class MenuPrincipalGUI extends javax.swing.JFrame {
 
         getContentPane().add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 550));
 
-        pack();
+        setSize(new java.awt.Dimension(766, 558));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

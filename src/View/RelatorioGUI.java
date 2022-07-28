@@ -39,8 +39,8 @@ public class RelatorioGUI extends javax.swing.JFrame {
         jButtonVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(750, 550));
-        setPreferredSize(new java.awt.Dimension(750, 550));
+        setMinimumSize(new java.awt.Dimension(766, 580));
+        setPreferredSize(new java.awt.Dimension(766, 580));
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -75,6 +75,7 @@ public class RelatorioGUI extends javax.swing.JFrame {
         jPanel1.add(jLabelRS, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, -1, -1));
 
         jTextFieldTotal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        jTextFieldTotal.setEnabled(false);
         jPanel1.add(jTextFieldTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 100, 160, -1));
 
         jButtonVoltar.setBackground(new java.awt.Color(102, 0, 0));
@@ -98,7 +99,7 @@ public class RelatorioGUI extends javax.swing.JFrame {
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(766, 558));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

@@ -82,7 +82,8 @@ public class AgendaGUI extends javax.swing.JFrame {
         jButtonAgendamentoVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(750, 550));
+        setMinimumSize(new java.awt.Dimension(766, 580));
+        setPreferredSize(new java.awt.Dimension(766, 580));
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         TabAgenda.setBackground(new java.awt.Color(51, 51, 51));
@@ -357,7 +358,7 @@ public class AgendaGUI extends javax.swing.JFrame {
 
         getContentPane().add(jTabbedPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 750, 550));
 
-        pack();
+        setSize(new java.awt.Dimension(766, 558));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 

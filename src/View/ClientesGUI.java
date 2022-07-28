@@ -57,8 +57,8 @@ public class ClientesGUI extends javax.swing.JFrame {
         jButtonCadastroVoltar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setMinimumSize(new java.awt.Dimension(750, 550));
-        setPreferredSize(new java.awt.Dimension(750, 550));
+        setMinimumSize(new java.awt.Dimension(766, 580));
+        setPreferredSize(new java.awt.Dimension(766, 580));
 
         TabClientes.setBackground(new java.awt.Color(51, 51, 51));
         TabClientes.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -201,7 +201,7 @@ public class ClientesGUI extends javax.swing.JFrame {
             .addComponent(jTabbedPane1)
         );
 
-        pack();
+        setSize(new java.awt.Dimension(766, 558));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
