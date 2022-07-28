@@ -4,17 +4,18 @@
  */
 package View;
 
+import Controller.AgendaController;
+
 /**
  *
  * @author uso
  */
 public class AgendaGUI extends javax.swing.JFrame {
-
-    /**
-     * Creates new form Agendamento
-     */
+    private final AgendaController controller;
+    
     public AgendaGUI() {
         initComponents();
+        controller = new AgendaController(this);
     }
 
     /**
@@ -105,6 +106,11 @@ public class AgendaGUI extends javax.swing.JFrame {
         jButton1.setBackground(new java.awt.Color(102, 0, 0));
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("VOLTAR");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
         TabAgenda.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
 
         jTabbedPane1.addTab("Agenda", TabAgenda);
@@ -351,6 +357,10 @@ public class AgendaGUI extends javax.swing.JFrame {
     private void jButtonAgendamentoAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendamentoAgendarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonAgendamentoAgendarActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        controller
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments

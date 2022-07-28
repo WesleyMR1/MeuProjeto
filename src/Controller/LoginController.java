@@ -2,7 +2,7 @@
 package Controller;
 
 import DAO.Conexao;
-import DAO.UsuarioDAO;
+import DAO.LoginDAO;
 import Helper.LoginHelper;
 import Model.Usuario;
 import View.LoginGUI;
@@ -20,27 +20,23 @@ public class LoginController {
         this.view = view;
         this.helper = new LoginHelper(view);
     }
-    
-    public void fizTarefa(){
-        System.out.println("Busquei algo no banco de dados");
-        this.view.exibemensagem("Executei o fiz tarefa");
-    }
-    
+ 
     public void autenticaLogin() throws SQLException{
         //pegar Usuario na view
         Usuario modelo = helper.obterModelo();
         //pesquisar Usuario no banco
         Connection conexao = new Conexao().getConnection();
-        UsuarioDAO usuarioDao = new UsuarioDAO(conexao);
+        LoginDAO loginDAO = new LoginDAO(conexao);
         
-        boolean pesquisa = usuarioDao.autenticaUsuarioESenha(modelo);
+        boolean pesquisa = loginDAO.autenticaUsuarioESenha(modelo);
         //
         //se Usuario da view = usuario do banco -> menu
         //se não -> mensagem de usuario e senha invalidos
             if (pesquisa) {
                 
-            MenuPrincipalGUI menu = new MenuPrincipalGUI();
-            menu.setVisible(true);
+            MenuPrincipalGUI menuView = new MenuPrincipalGUI();
+            menuView.setVisible(true);
+            view.dispose();
             
         } else {
                 JOptionPane.showMessageDialog(null, "Usuario e/ou senha incorretos");
