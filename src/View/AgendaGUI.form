@@ -410,6 +410,7 @@
             <Component class="javax.swing.JTextField" name="jTextFieldAgendamentoID">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Events>
                 <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jTextFieldAgendamentoIDActionPerformed"/>
@@ -422,15 +423,43 @@
             </Component>
             <Component class="javax.swing.JComboBox" name="jComboBoxAgendamentoCliente">
               <Properties>
+                <Property name="editable" type="boolean" value="true"/>
+                <Property name="maximumRowCount" type="int" value="300"/>
                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-                  <StringArray count="4">
+                  <StringArray count="27">
                     <StringItem index="0" value="Item 1"/>
                     <StringItem index="1" value="Item 2"/>
                     <StringItem index="2" value="Item 3"/>
                     <StringItem index="3" value="Item 4"/>
+                    <StringItem index="4" value="asdasd"/>
+                    <StringItem index="5" value="asdasdas"/>
+                    <StringItem index="6" value="tyry"/>
+                    <StringItem index="7" value="wersdf"/>
+                    <StringItem index="8" value="qwezxfsadc"/>
+                    <StringItem index="9" value="z\cxcz"/>
+                    <StringItem index="10" value="asdasd"/>
+                    <StringItem index="11" value="asdasdas"/>
+                    <StringItem index="12" value="asdasd"/>
+                    <StringItem index="13" value="asdasdas"/>
+                    <StringItem index="14" value="dasdasd"/>
+                    <StringItem index="15" value="asdasd"/>
+                    <StringItem index="16" value="asd"/>
+                    <StringItem index="17" value="asda"/>
+                    <StringItem index="18" value="sdas"/>
+                    <StringItem index="19" value="d"/>
+                    <StringItem index="20" value="asd"/>
+                    <StringItem index="21" value="as"/>
+                    <StringItem index="22" value="da"/>
+                    <StringItem index="23" value="sd"/>
+                    <StringItem index="24" value="as"/>
+                    <StringItem index="25" value="das"/>
+                    <StringItem index="26" value="d"/>
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxAgendamentoClienteActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
@@ -499,6 +528,9 @@
                   </StringArray>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jComboBoxAgendamentoProcedimentoActionPerformed"/>
+              </Events>
               <AuxValues>
                 <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
               </AuxValues>
@@ -669,6 +701,7 @@
             <Component class="javax.swing.JTextField" name="jTextFieldAgendamentoPrecoTotal">
               <Properties>
                 <Property name="editable" type="boolean" value="false"/>
+                <Property name="enabled" type="boolean" value="false"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">

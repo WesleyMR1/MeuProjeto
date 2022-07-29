@@ -1,9 +1,9 @@
-package Helper;
+package Controller.Helper;
 
 import Model.Usuario;
 import View.LoginGUI;
 
-public class LoginHelper {
+public class LoginHelper implements IHelper{
     
     private final LoginGUI view;
 
@@ -11,6 +11,7 @@ public class LoginHelper {
         this.view = view;
     }
     
+    @Override
     public Usuario obterModelo(){
         String usuario = view.getjTextFieldUsuario().getText();
         String senha = view.getjPasswordFieldSenha().getText();
@@ -26,6 +27,7 @@ public class LoginHelper {
         view.getjPasswordFieldSenha().setText(senha);
     }
     
+    @Override
     public void limparTela(){
         view.getjTextFieldUsuario().setText("");
         view.getjPasswordFieldSenha().setText("");

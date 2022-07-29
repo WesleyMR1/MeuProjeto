@@ -1,9 +1,9 @@
 
 package Controller;
 
-import DAO.Conexao;
-import DAO.LoginDAO;
-import Helper.LoginHelper;
+import Model.DAO.Conexao;
+import Model.DAO.LoginDAO;
+import Controller.Helper.LoginHelper;
 import Model.Usuario;
 import View.LoginGUI;
 import View.MenuPrincipalGUI;

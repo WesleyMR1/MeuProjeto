@@ -5,6 +5,11 @@
 package View;
 
 import Controller.AgendaController;
+import com.toedter.calendar.JDateChooser;
+import javax.swing.JComboBox;
+import javax.swing.JFormattedTextField;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
@@ -226,6 +231,7 @@ public class AgendaGUI extends javax.swing.JFrame {
         TabAgendamento2.add(jLabelAgendamentoHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
         jTextFieldAgendamentoID.setEditable(false);
+        jTextFieldAgendamentoID.setEnabled(false);
         jTextFieldAgendamentoID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAgendamentoIDActionPerformed(evt);
@@ -233,7 +239,14 @@ public class AgendaGUI extends javax.swing.JFrame {
         });
         TabAgendamento2.add(jTextFieldAgendamentoID, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 120, -1, 20));
 
-        jComboBoxAgendamentoCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxAgendamentoCliente.setEditable(true);
+        jComboBoxAgendamentoCliente.setMaximumRowCount(300);
+        jComboBoxAgendamentoCliente.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4", "asdasd", "asdasdas", "tyry", "wersdf", "qwezxfsadc", "z\\cxcz", "asdasd", "asdasdas", "asdasd", "asdasdas", "dasdasd", "asdasd", "asd", "asda", "sdas", "d", "asd", "as", "da", "sd", "as", "das", "d" }));
+        jComboBoxAgendamentoCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxAgendamentoClienteActionPerformed(evt);
+            }
+        });
         TabAgendamento2.add(jComboBoxAgendamentoCliente, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 120, 200, 20));
 
         jLabelAgendamentoID.setFont(new java.awt.Font("Segoe UI", 0, 8)); // NOI18N
@@ -252,6 +265,11 @@ public class AgendaGUI extends javax.swing.JFrame {
         TabAgendamento2.add(jLabelAgendamentoProcedimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 90, -1, -1));
 
         jComboBoxAgendamentoProcedimento.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBoxAgendamentoProcedimento.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxAgendamentoProcedimentoActionPerformed(evt);
+            }
+        });
         TabAgendamento2.add(jComboBoxAgendamentoProcedimento, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 90, 220, -1));
 
         jLabelAgendamentoProcedimento2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -305,6 +323,7 @@ public class AgendaGUI extends javax.swing.JFrame {
         TabAgendamento2.add(jLabelAgendamentoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, -1, -1));
 
         jTextFieldAgendamentoPrecoTotal.setEditable(false);
+        jTextFieldAgendamentoPrecoTotal.setEnabled(false);
         TabAgendamento2.add(jTextFieldAgendamentoPrecoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 190, -1));
 
         jLabelAgendamentoRS.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -381,6 +400,14 @@ public class AgendaGUI extends javax.swing.JFrame {
     private void jButtonAgendamentoVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendamentoVoltarActionPerformed
         controller.voltarAoMenuPrincipal();
     }//GEN-LAST:event_jButtonAgendamentoVoltarActionPerformed
+
+    private void jComboBoxAgendamentoProcedimentoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxAgendamentoProcedimentoActionPerformed
+       
+    }//GEN-LAST:event_jComboBoxAgendamentoProcedimentoActionPerformed
+
+    private void jComboBoxAgendamentoClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxAgendamentoClienteActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxAgendamentoClienteActionPerformed
 
     /**
      * @param args the command line arguments
@@ -475,4 +502,108 @@ public class AgendaGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldConfirmacaoProcedimento;
     private javax.swing.JTextField jTextFieldConfirmacaoProcedimento2;
     // End of variables declaration//GEN-END:variables
+
+    public JTextArea getjTextAreaAgendamentoOBS() {
+        return jTextAreaAgendamentoOBS;
+    }
+
+    public void setjTextAreaAgendamentoOBS(JTextArea jTextAreaAgendamentoOBS) {
+        this.jTextAreaAgendamentoOBS = jTextAreaAgendamentoOBS;
+    }
+
+    public JTextField getjTextFieldAgendamentoID() {
+        return jTextFieldAgendamentoID;
+    }
+
+    public void setjTextFieldAgendamentoID(JTextField jTextFieldAgendamentoID) {
+        this.jTextFieldAgendamentoID = jTextFieldAgendamentoID;
+    }
+
+    public JTextField getjTextFieldAgendamentoPreco() {
+        return jTextFieldAgendamentoPreco;
+    }
+
+    public void setjTextFieldAgendamentoPreco(JTextField jTextFieldAgendamentoPreco) {
+        this.jTextFieldAgendamentoPreco = jTextFieldAgendamentoPreco;
+    }
+
+    public JTextField getjTextFieldAgendamentoPreco2() {
+        return jTextFieldAgendamentoPreco2;
+    }
+
+    public void setjTextFieldAgendamentoPreco2(JTextField jTextFieldAgendamentoPreco2) {
+        this.jTextFieldAgendamentoPreco2 = jTextFieldAgendamentoPreco2;
+    }
+
+    public JTextField getjTextFieldAgendamentoPrecoLocal() {
+        return jTextFieldAgendamentoPrecoLocal;
+    }
+
+    public void setjTextFieldAgendamentoPrecoLocal(JTextField jTextFieldAgendamentoPrecoLocal) {
+        this.jTextFieldAgendamentoPrecoLocal = jTextFieldAgendamentoPrecoLocal;
+    }
+
+    public JTextField getjTextFieldAgendamentoPrecoTotal() {
+        return jTextFieldAgendamentoPrecoTotal;
+    }
+
+    public void setjTextFieldAgendamentoPrecoTotal(JTextField jTextFieldAgendamentoPrecoTotal) {
+        this.jTextFieldAgendamentoPrecoTotal = jTextFieldAgendamentoPrecoTotal;
+    }
+
+    public JComboBox<String> getjComboBoxAgendamentoCliente() {
+        return jComboBoxAgendamentoCliente;
+    }
+
+    public void setjComboBoxAgendamentoCliente(JComboBox<String> jComboBoxAgendamentoCliente) {
+        this.jComboBoxAgendamentoCliente = jComboBoxAgendamentoCliente;
+    }
+
+    public JComboBox<String> getjComboBoxAgendamentoLocal() {
+        return jComboBoxAgendamentoLocal;
+    }
+
+    public void setjComboBoxAgendamentoLocal(JComboBox<String> jComboBoxAgendamentoLocal) {
+        this.jComboBoxAgendamentoLocal = jComboBoxAgendamentoLocal;
+    }
+
+    public JComboBox<String> getjComboBoxAgendamentoProcedimento() {
+        return jComboBoxAgendamentoProcedimento;
+    }
+
+    public void setjComboBoxAgendamentoProcedimento(JComboBox<String> jComboBoxAgendamentoProcedimento) {
+        this.jComboBoxAgendamentoProcedimento = jComboBoxAgendamentoProcedimento;
+    }
+
+    public JComboBox<String> getjComboBoxAgendamentoProcedimento2() {
+        return jComboBoxAgendamentoProcedimento2;
+    }
+
+    public void setjComboBoxAgendamentoProcedimento2(JComboBox<String> jComboBoxAgendamentoProcedimento2) {
+        this.jComboBoxAgendamentoProcedimento2 = jComboBoxAgendamentoProcedimento2;
+    }
+
+    public JDateChooser getjDateChooserAgendamentoData() {
+        return jDateChooserAgendamentoData;
+    }
+
+    public void setjDateChooserAgendamentoData(JDateChooser jDateChooserAgendamentoData) {
+        this.jDateChooserAgendamentoData = jDateChooserAgendamentoData;
+    }
+
+    public JFormattedTextField getjFormattedTextFieldAgendamentoHora() {
+        return jFormattedTextFieldAgendamentoHora;
+    }
+
+    public void setjFormattedTextFieldAgendamentoHora(JFormattedTextField jFormattedTextFieldAgendamentoHora) {
+        this.jFormattedTextFieldAgendamentoHora = jFormattedTextFieldAgendamentoHora;
+    }
+
+    
+
+
+
+
+
+
 }

@@ -54,8 +54,8 @@ public class LoginGUI extends javax.swing.JFrame {
 
         jLabelTitulo.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
         jLabelTitulo.setForeground(new java.awt.Color(255, 255, 255));
-        jLabelTitulo.setText("MoniFiuza Sobrancelhas");
-        jPanel1.add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 20, -1, -1));
+        jLabelTitulo.setText("Meu Projeto");
+        jPanel1.add(jLabelTitulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 20, -1, -1));
 
         jPanel2.setBackground(new java.awt.Color(102, 0, 102));
         jPanel2.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));

@@ -5,6 +5,8 @@
 package View;
 
 import Controller.ProcedimentosController;
+import javax.swing.JComboBox;
+import javax.swing.JTextField;
 
 /**
  *
@@ -168,7 +170,7 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
             .addComponent(jTabbedPane1)
         );
 
-        setSize(new java.awt.Dimension(746, 548));
+        setSize(new java.awt.Dimension(782, 588));
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
@@ -238,4 +240,42 @@ public class ProcedimentosGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldNome;
     private javax.swing.JTextField jTextFieldPreco;
     // End of variables declaration//GEN-END:variables
+
+    public JComboBox<String> getjComboBoxSituacao() {
+        return jComboBoxSituacao;
+    }
+
+    public void setjComboBoxSituacao(JComboBox<String> jComboBoxSituacao) {
+        this.jComboBoxSituacao = jComboBoxSituacao;
+    }
+
+    public JTextField getjTextFieldID() {
+        return jTextFieldID;
+    }
+
+    public void setjTextFieldID(JTextField jTextFieldID) {
+        this.jTextFieldID = jTextFieldID;
+    }
+
+    public JTextField getjTextFieldNome() {
+        return jTextFieldNome;
+    }
+
+    public void setjTextFieldNome(JTextField jTextFieldNome) {
+        this.jTextFieldNome = jTextFieldNome;
+    }
+
+    public JTextField getjTextFieldPreco() {
+        return jTextFieldPreco;
+    }
+
+    public void setjTextFieldPreco(JTextField jTextFieldPreco) {
+        this.jTextFieldPreco = jTextFieldPreco;
+    }
+
+
+
+
+
+
 }

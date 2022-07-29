@@ -5,6 +5,9 @@
 package View;
 
 import Controller.ClienteController;
+import javax.swing.JFormattedTextField;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 /**
  *
@@ -175,8 +178,10 @@ public class ClientesGUI extends javax.swing.JFrame {
         jLabelCadastroID.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabelCadastroID.setForeground(new java.awt.Color(255, 255, 255));
         jLabelCadastroID.setText("ID");
-        TabCadastro.add(jLabelCadastroID, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 130, 20, -1));
-        TabCadastro.add(jTextFieldCadastroID, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 130, -1, -1));
+        TabCadastro.add(jLabelCadastroID, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 120, 20, -1));
+
+        jTextFieldCadastroID.setText("0");
+        TabCadastro.add(jTextFieldCadastroID, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 120, -1, -1));
 
         jButtonCadastroVoltar.setBackground(new java.awt.Color(102, 0, 0));
         jButtonCadastroVoltar.setForeground(new java.awt.Color(255, 255, 255));
@@ -274,4 +279,53 @@ public class ClientesGUI extends javax.swing.JFrame {
     private javax.swing.JTextField jTextFieldCadastroID;
     private javax.swing.JTextField jTextFieldCadastroNome;
     // End of variables declaration//GEN-END:variables
+
+    public JFormattedTextField getjFormattedTextFieldCadastroCPF() {
+        return jFormattedTextFieldCadastroCPF;
+    }
+
+    public void setjFormattedTextFieldCadastroCPF(JFormattedTextField jFormattedTextFieldCadastroCPF) {
+        this.jFormattedTextFieldCadastroCPF = jFormattedTextFieldCadastroCPF;
+    }
+
+    public JFormattedTextField getjFormattedTextFieldCadastroCelular() {
+        return jFormattedTextFieldCadastroCelular;
+    }
+
+    public void setjFormattedTextFieldCadastroCelular(JFormattedTextField jFormattedTextFieldCadastroCelular) {
+        this.jFormattedTextFieldCadastroCelular = jFormattedTextFieldCadastroCelular;
+    }
+
+    public JTextArea getjTextAreaCadastroOBS() {
+        return jTextAreaCadastroOBS;
+    }
+
+    public void setjTextAreaCadastroOBS(JTextArea jTextAreaCadastroOBS) {
+        this.jTextAreaCadastroOBS = jTextAreaCadastroOBS;
+    }
+
+    public JTextField getjTextFieldCadastroID() {
+        return jTextFieldCadastroID;
+    }
+
+    public void setjTextFieldCadastroID(JTextField jTextFieldCadastroID) {
+        this.jTextFieldCadastroID = jTextFieldCadastroID;
+    }
+
+    public JTextField getjTextFieldCadastroNome() {
+        return jTextFieldCadastroNome;
+    }
+
+    public void setjTextFieldCadastroNome(JTextField jTextFieldCadastroNome) {
+        this.jTextFieldCadastroNome = jTextFieldCadastroNome;
+    }
+
+
+
+
+
+
+
+
+
 }

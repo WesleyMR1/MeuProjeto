@@ -1,6 +1,6 @@
 
-package DAO;
-import Helper.LoginHelper;
+package Model.DAO;
+import Controller.Helper.LoginHelper;
 import Model.Usuario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
