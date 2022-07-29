@@ -2,6 +2,7 @@
 package Controller.Helper;
 
 import Model.Agendamento;
+import Model.Builder.AgendamentoBuilder;
 import View.AgendaGUI;
 
 
@@ -27,8 +28,23 @@ public class AgendaHelper implements IHelper{
         double precoTotal = Double.valueOf(view.getjTextFieldAgendamentoPrecoTotal().getText());
         String obs = view.getjTextAreaAgendamentoOBS().getText();
         
-        Agendamento modelo = new Agendamento(0, id_cliente, dataHora, procedimento, preco, procedimento2, preco2, local, precoLocal, obs, precoTotal);
-        
+        Agendamento modelo = new AgendamentoBuilder()
+                .setData(dataHora)
+                .setId_cliente(id_cliente)
+                .setLocal(local)
+                .setObs(obs)
+                .setPrecoLocal(precoLocal)
+                .setPrecoProcedimento(precoLocal)
+                .setPrecoProcedimento2(precoTotal)
+                .setPrecoTotal(precoTotal)
+                .setProcedimento(procedimento)
+                .setProcedimento2(procedimento2)
+                .createAgendamento()
+                ;
+            
+                
+                
+                
         return modelo;
     }
     

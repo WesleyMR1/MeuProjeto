@@ -230,8 +230,6 @@ public class AgendaGUI extends javax.swing.JFrame {
         jLabelAgendamentoHora.setText("Hora");
         TabAgendamento2.add(jLabelAgendamentoHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 200, -1, -1));
 
-        jTextFieldAgendamentoID.setEditable(false);
-        jTextFieldAgendamentoID.setEnabled(false);
         jTextFieldAgendamentoID.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jTextFieldAgendamentoIDActionPerformed(evt);
@@ -300,11 +298,7 @@ public class AgendaGUI extends javax.swing.JFrame {
         jLabelAgendamentoData.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAgendamentoData.setText("Data");
         TabAgendamento2.add(jLabelAgendamentoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, -1, -1));
-
-        jTextFieldAgendamentoPreco2.setEditable(false);
         TabAgendamento2.add(jTextFieldAgendamentoPreco2, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 180, 60, -1));
-
-        jTextFieldAgendamentoPreco.setEditable(false);
         TabAgendamento2.add(jTextFieldAgendamentoPreco, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 120, 60, -1));
 
         jLabelAgendamentoPreco2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -321,9 +315,6 @@ public class AgendaGUI extends javax.swing.JFrame {
         jLabelAgendamentoTotal.setForeground(new java.awt.Color(255, 255, 255));
         jLabelAgendamentoTotal.setText("TOTAL");
         TabAgendamento2.add(jLabelAgendamentoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 310, -1, -1));
-
-        jTextFieldAgendamentoPrecoTotal.setEditable(false);
-        jTextFieldAgendamentoPrecoTotal.setEnabled(false);
         TabAgendamento2.add(jTextFieldAgendamentoPrecoTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 310, 190, -1));
 
         jLabelAgendamentoRS.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -360,7 +351,11 @@ public class AgendaGUI extends javax.swing.JFrame {
         jDateChooserAgendamentoData.setDateFormatString("d'/'MM'/'y");
         TabAgendamento2.add(jDateChooserAgendamentoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 200, -1));
 
-        jFormattedTextFieldAgendamentoHora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(java.text.DateFormat.getTimeInstance(java.text.DateFormat.SHORT))));
+        try {
+            jFormattedTextFieldAgendamentoHora.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.MaskFormatter("##:##")));
+        } catch (java.text.ParseException ex) {
+            ex.printStackTrace();
+        }
         TabAgendamento2.add(jFormattedTextFieldAgendamentoHora, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 200, 200, -1));
 
         jButtonAgendamentoVoltar.setBackground(new java.awt.Color(102, 0, 0));
@@ -386,7 +381,7 @@ public class AgendaGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldAgendamentoIDActionPerformed
 
     private void jButtonAgendamentoAgendarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendamentoAgendarActionPerformed
-        // TODO add your handling code here:
+        controller.mostrarNaTela();
     }//GEN-LAST:event_jButtonAgendamentoAgendarActionPerformed
 
     private void jButtonAgendaVoltarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonAgendaVoltarActionPerformed
