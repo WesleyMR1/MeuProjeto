@@ -4,6 +4,7 @@ package Controller.Helper;
 import Model.Agendamento;
 import Model.Builder.AgendamentoBuilder;
 import View.AgendaGUI;
+import javax.swing.JTextField;
 
 
 public class AgendaHelper implements IHelper{
@@ -16,7 +17,7 @@ public class AgendaHelper implements IHelper{
     @Override
     public Agendamento obterModelo(){
         int id_cliente = Integer.parseInt(view.getjTextFieldAgendamentoID().getText());
-        String data = view.getjDateChooserAgendamentoData().getDateFormatString();
+        String data = ((JTextField)view.getjDateChooserAgendamentoData().getDateEditor().getUiComponent()).getText();
         String hora = view.getjFormattedTextFieldAgendamentoHora().getText();
         String dataHora = (data+" "+hora);
         String procedimento = (String) view.getjComboBoxAgendamentoProcedimento().getSelectedItem();

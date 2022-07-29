@@ -190,7 +190,7 @@ public class AgendaGUI extends javax.swing.JFrame {
         jTextFieldConfirmacaoProcedimento2.setEditable(false);
         TabConfirmacao.add(jTextFieldConfirmacaoProcedimento2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 240, 270, -1));
 
-        jDateChooserConfirmacao.setDateFormatString("d'/'MM'/'y");
+        jDateChooserConfirmacao.setDateFormatString("yyyy/MM/dd");
         TabConfirmacao.add(jDateChooserConfirmacao, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 30, 130, -1));
 
         jButtonConfirmacaoVoltar.setBackground(new java.awt.Color(102, 0, 0));
@@ -348,7 +348,7 @@ public class AgendaGUI extends javax.swing.JFrame {
         TabAgendamento2.add(jLabelAgendamentoPrecoLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, -1, -1));
         TabAgendamento2.add(jTextFieldAgendamentoPrecoLocal, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 250, 60, -1));
 
-        jDateChooserAgendamentoData.setDateFormatString("d'/'MM'/'y");
+        jDateChooserAgendamentoData.setDateFormatString("yyyy/MM/dd");
         TabAgendamento2.add(jDateChooserAgendamentoData, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 160, 200, -1));
 
         try {

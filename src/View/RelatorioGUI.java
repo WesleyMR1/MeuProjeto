@@ -29,14 +29,13 @@ public class RelatorioGUI extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        jMonthChooser = new com.toedter.calendar.JMonthChooser();
-        jYearChooser = new com.toedter.calendar.JYearChooser();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTableTabela = new javax.swing.JTable();
         jLabelTotal = new javax.swing.JLabel();
         jLabelRS = new javax.swing.JLabel();
         jTextFieldTotal = new javax.swing.JTextField();
         jButtonVoltar = new javax.swing.JButton();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setMinimumSize(new java.awt.Dimension(766, 580));
@@ -44,10 +43,6 @@ public class RelatorioGUI extends javax.swing.JFrame {
 
         jPanel1.setBackground(new java.awt.Color(51, 51, 51));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jMonthChooser.setOpaque(false);
-        jPanel1.add(jMonthChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, -1, -1));
-        jPanel1.add(jYearChooser, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 40, -1, -1));
 
         jTableTabela.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -74,8 +69,8 @@ public class RelatorioGUI extends javax.swing.JFrame {
         jLabelRS.setText("R$");
         jPanel1.add(jLabelRS, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, -1, -1));
 
+        jTextFieldTotal.setEditable(false);
         jTextFieldTotal.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        jTextFieldTotal.setEnabled(false);
         jPanel1.add(jTextFieldTotal, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 100, 160, -1));
 
         jButtonVoltar.setBackground(new java.awt.Color(102, 0, 0));
@@ -87,6 +82,9 @@ public class RelatorioGUI extends javax.swing.JFrame {
             }
         });
         jPanel1.add(jButtonVoltar, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 30, -1, 40));
+
+        jDateChooser1.setDateFormatString("MMMM/yyyy");
+        jPanel1.add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 40, 170, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -144,13 +142,12 @@ public class RelatorioGUI extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonVoltar;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JLabel jLabelRS;
     private javax.swing.JLabel jLabelTotal;
-    private com.toedter.calendar.JMonthChooser jMonthChooser;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTable jTableTabela;
     private javax.swing.JTextField jTextFieldTotal;
-    private com.toedter.calendar.JYearChooser jYearChooser;
     // End of variables declaration//GEN-END:variables
 }

@@ -312,7 +312,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="jDateChooserConfirmacao">
               <Properties>
-                <Property name="dateFormatString" type="java.lang.String" value="d&apos;/&apos;MM&apos;/&apos;y"/>
+                <Property name="dateFormatString" type="java.lang.String" value="yyyy/MM/dd"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
@@ -809,7 +809,7 @@
             </Component>
             <Component class="com.toedter.calendar.JDateChooser" name="jDateChooserAgendamentoData">
               <Properties>
-                <Property name="dateFormatString" type="java.lang.String" value="d&apos;/&apos;MM&apos;/&apos;y"/>
+                <Property name="dateFormatString" type="java.lang.String" value="yyyy/MM/dd"/>
               </Properties>
               <Constraints>
                 <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
